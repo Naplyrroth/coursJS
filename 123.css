@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+    color: black;
+    border: cadetblue solid;
+    background-color: cadetblue;
+}
+
+html{
+    background-color:white;
+}
+
+
+.buttongreen:hover {
+    background-color: green;
+    box-shadow: 4px 4px 0px black;
+}
+
+.buttonred:hover {
+    
+    background-color: red;
+    box-shadow: 4px 4px 0px black;
+}
+
+.buttonblue:hover {
+    background-color: blue;
+    box-shadow: 4px 4px 0px black;
+}
+
+.buttonpurple:hover {
+    background-color: blueviolet;
+    box-shadow: 4px 4px 0px black;
+}
+
