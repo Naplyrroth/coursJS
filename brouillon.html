@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+        <head>
+    <title>.: Inscription :.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" media="screen" type="text/css" title="Design" href="design/design.css" />
+<script language="JavaScript">
+<!--
+
+
+function Verifier_pseudo()
+{
+        if(document.formulaire.pseudo.value == "")
+        {
+                alert ('Veulliez entrer votre pseudo !');
+                return false;
+        }
+        else {return true;}
+} 
+
+function Verifier_mot_de_passe()
+{
+        if(document.formulaire.mot_de_passe.value <= 4)
+        {
+                alert ('Votre mot de passe doit comporté plus de 4 caractères !');
+                return false;
+        }
+        else {return true;}
+}
+
+function Verifier_mot_de_passe_2()
+{
+        let mot_de_passe_1 = document.formulaire.mot_de_passe.value;
+        let mot_de_passe_2 = document.formulaire.mot_de_passe_2.value;
+        if(mot_de_passe_1 != mot_de_passe_2)
+        {
+                alert ('Les mots de passe entrés ne sont pas identiques !');
+                return false;
+        }
+        else {return true;}
+}
+        
+       
+function Verifier_mail()
+{             
+        let email = document.formulaire.adresse_email.value;
+         if (email.search(/^[^._-][a-z0-9._-]+[^._-]@[a-z0-9._-]+([a-z0-9]+[^._-])?[.-]+[a-z]{2,4}$/) == -1)
+        {
+            alert ('L\'adresse e-mail entrée n\'est pas valide !'); 
+            return false;
+        }
+else {return true;}
+}
+//-->
+</script>
+</head>
+<body>
+   <form action="inscription.php" method="post" name="formulaire" onSubmit="return check();">
+                <label> Entrer votre Pseudo :         </label><input name="pseudo" type="text" onBlur="return Verifier_pseudo();" /><br/>
+                <label> Saisissez un mot de passe :         </label><input name="mot_de_passe" type="text" onBlur="return Verifier_mot_de_passe();" /><br/>
+                <label> Confirmez le mot de passe :              </label><input name="mot_de_passe_2" type="text" onBlur="return Verfier_mot_de_passe_2();" /><br/>
+                <label> Saisissez votre adresse e-mail  :       </label><input name="adresse_email" type="text" onBlur="return Verifier_mail();" /><br/>
+                <input type="submit" value="Terminer l'inscription" onClick="this.value='Inscription en cours ...'" onMouseOver="this.value='Avant de cliquer verifie tout !'" />   
+        </form>        
+</body>
+</html>
