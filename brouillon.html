@@ -8,25 +8,6 @@
 <!--
 
 
-function Verifier_pseudo()
-{
-        if(document.formulaire.pseudo.value == "")
-        {
-                alert ('Veulliez entrer votre pseudo !');
-                return false;
-        }
-        else {return true;}
-} 
-
-function Verifier_mot_de_passe()
-{
-        if(document.formulaire.mot_de_passe.value <= 4)
-        {
-                alert ('Votre mot de passe doit comporté plus de 4 caractères !');
-                return false;
-        }
-        else {return true;}
-}
 
 function Verifier_mot_de_passe_2()
 {
@@ -52,11 +33,11 @@ function Verifier_mail()
 else {return true;}
 }
 //-->
+
 </script>
 </head>
 <body>
    <form action="inscription.php" method="post" name="formulaire" onSubmit="return check();">
-                <label> Entrer votre Pseudo :         </label><input name="pseudo" type="text" onBlur="return Verifier_pseudo();" /><br/>
                 <label> Saisissez un mot de passe :         </label><input name="mot_de_passe" type="text" onBlur="return Verifier_mot_de_passe();" /><br/>
                 <label> Confirmez le mot de passe :              </label><input name="mot_de_passe_2" type="text" onBlur="return Verfier_mot_de_passe_2();" /><br/>
                 <label> Saisissez votre adresse e-mail  :       </label><input name="adresse_email" type="text" onBlur="return Verifier_mail();" /><br/>
